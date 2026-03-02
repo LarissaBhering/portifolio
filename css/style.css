@@ -1,0 +1,252 @@
+body {
+   font-family: 'Poppins', sans-serif;
+   background-color: rgb(0, 0, 0);
+   color: #2C2C2C;;
+    width: 100%;
+    height: 100vh;
+    overflow:-x: hidden;
+    
+
+}
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing:border-box;
+    text-decoration: none;
+     border: none;
+     outline:none;
+     font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+
+header{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 6%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 3rem;
+    color:rgb(136, 76, 39);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+
+}.logo:hover{
+    transform:scale(1.1);
+}
+nav a{
+    font-size: 1.8rem;
+    color:rgb(136, 76, 39);
+    font-weight:500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav{
+    display: flex;
+    gap: 2.5rem;
+}
+nav a:hover,
+nav a:active {
+color:r rgb(136, 76, 39);
+border-bottom: 3px solid rgb(136, 76, 39);
+}
+@media(max-width:995px) {
+    nav{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid ; rgb(136, 76, 39);
+        border-bottom: 3px solid  rgb(136, 76, 39);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+background-color:beige;  
+border-top: 0.1 solid;
+}
+  }
+    nav.active{
+        display: block;
+        font-size: 2rem;
+        margin:3rem 0;
+    
+    }
+nav a:hover
+nav active{
+    padding: 1rem;
+    border: 0.5rem;
+    border-bottom:0.5rem solid #b7b7b7
+}
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color:#F3EDE7;
+}
+.home.home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+
+}
+span{
+    color: rgb(136, 76, 39);
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+
+}
+.home-img{
+    border-radius: 50%;
+}
+ .home-img img{
+    position: relative;
+    top: 30px;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid rgb(136, 76, 39);
+    cursor: pointer;
+    transition: 0.2s linear;
+ }
+ .home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+ }
+
+ .social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid rgb(139,76,39);
+    font-size: 2rem ;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    
+ }
+ .social-icons a:hover{
+color: rgb(136, 76, 39);
+transform: scale(1.3)translateY(-5px);
+background-color: rgb(196, 90, 148);
+box-shadow: 0 0 25px rgb(196, 90, 148);
+ }
+
+ .btn{
+display: inline-block;
+padding: 1rem 2.8rem;
+background-color: #F3EDE7;
+border-radius: 4rem;
+font-size: 1.6rem;
+color:rgb(136, 76, 39);
+letter-spacing: 0.3rem;
+font-weight: 600;
+border: 2px solid rgb(136, 76, 39);
+transition: 0.3s ease;
+cursor: pointer;
+ }
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color:rgb(136, 76, 39);
+    color: #2C2C2C;
+    box-shadow: 0 0 25px #b7b7b7;
+
+}
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "Sofware Developer";
+    color:rgb(136, 76, 39);
+    animation: words 20s infinite;
+}
+.typing-text span::after{
+    content: "";
+    background-color: #2C2C2C;
+    pasition:absolute;
+    width: 100%;
+    border-left: 3px solid #2C2C2C;
+    right:-8;
+    animation: cursor 0.6s infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 3px solid #F3EDE7
+    }
+}
+@keyframes words{
+    0%, 20%{
+        content: "Web Developer";
+    }
+    21%, 40%{
+        content: "Software Developer";
+    }
+    41%, 60%{
+        content: "Web Designer";
+    }
+    61%, 80%{
+        content: "Youtuber";
+    }
+    81%, 100%{
+        content: "Script Writer";
+    }
+}
+
+@media(max-width:1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+@media(max-width:995px){
+    .hone{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+.home.home-content h3{
+    font-size: 2.5rem;
+}
+
+.home-content h1{
+    font-size: 5rem;
+}
+
+.home-img img{
+    width: 70vh;
+    margin-top: 4rem;
+}
+}
+
+
+
+
+
+ 
